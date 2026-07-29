@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1020">
+  <meta name="description" content="A focused map of CarpeOS architecture, installation, capture, retrieval, MCP, and design records.">
+  <title>Documentation — CarpeOS</title>
+  <link rel="icon" href="../assets/carpeos-mark.png" type="image/png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header is-scrolled" data-header>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="../index.html#top" aria-label="CarpeOS home">
+        <img src="../assets/carpeos-mark.png" alt="" width="38" height="38">
+        <span>CarpeOS</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation" data-nav-toggle>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+      <div class="nav-links" id="primary-links" data-nav-links>
+        <a href="../index.html#why">Why</a>
+        <a href="../index.html#how">How it fits</a>
+        <a href="../index.html#interfaces">Interfaces</a>
+        <a href="../index.html#install">Install</a>
+        <a class="button button-small button-primary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="docs-hero section" aria-labelledby="docs-heading">
+      <div class="container docs-hero-inner">
+        <div class="reveal">
+          <span class="eyebrow">Documentation</span>
+          <h1 id="docs-heading">Understand the model before connecting the tools.</h1>
+          <p>CarpeOS is pre-MVP and local-first. These links point to the public source repository, where implementation status, contracts, ADRs, and verification live together.</p>
+        </div>
+        <div class="docs-hero-card reveal">
+          <span>Start here</span>
+          <strong>Capture context. Compound knowledge.</strong>
+          <p>Evidence is not a claim. Projections are not canonical. Accepted status is derived with provenance.</p>
+          <a href="../index.html#how">See the system flow <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="docs-directory section section-muted" aria-labelledby="directory-heading">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Guide map</span>
+          <h2 id="directory-heading">Choose the layer you need.</h2>
+          <p>The detailed documentation remains versioned with the implementation. Every destination below opens the current public source on GitHub.</p>
+        </div>
+
+        <div class="docs-directory-grid">
+          <section class="docs-group reveal" aria-labelledby="group-foundations">
+            <div class="docs-group-heading">
+              <span aria-hidden="true">01</span>
+              <div><h3 id="group-foundations">Foundations</h3><p>System shape, memory model, and durable decisions.</p></div>
+            </div>
+            <ul>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/architecture/overview.md" target="_blank" rel="noopener noreferrer"><span>Architecture overview</span><small>Layers, boundaries, and flow</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/architecture/memory-capacity.md" target="_blank" rel="noopener noreferrer"><span>Memory capacity</span><small>Total, active, procedural, projections</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/tree/main/docs/adr" target="_blank" rel="noopener noreferrer"><span>Architecture decisions</span><small>Why the model works this way</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/tree/main/spec/v1" target="_blank" rel="noopener noreferrer"><span>v1 specification</span><small>Normative schemas and contracts</small></a></li>
+            </ul>
+          </section>
+
+          <section class="docs-group reveal" aria-labelledby="group-install">
+            <div class="docs-group-heading">
+              <span aria-hidden="true">02</span>
+              <div><h3 id="group-install">Install and capture</h3><p>Set up locally and connect agent lifecycle hooks.</p></div>
+            </div>
+            <ul>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md" target="_blank" rel="noopener noreferrer"><span>One-stop install</span><small>Package, setup plan, and doctor</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/local-capture.md" target="_blank" rel="noopener noreferrer"><span>Local capture</span><small>Hooks, outbox, and private data</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/tree/main/adapters" target="_blank" rel="noopener noreferrer"><span>Provider adapters</span><small>Codex, Claude Code, and Grok Build templates</small></a></li>
+            </ul>
+          </section>
+
+          <section class="docs-group reveal" aria-labelledby="group-retrieval">
+            <div class="docs-group-heading">
+              <span aria-hidden="true">03</span>
+              <div><h3 id="group-retrieval">Retrieve and use</h3><p>Search locally and give agents bounded context.</p></div>
+            </div>
+            <ul>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/retrieval.md" target="_blank" rel="noopener noreferrer"><span>Retrieval guide</span><small>Search, recheck, and context packs</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-server.md" target="_blank" rel="noopener noreferrer"><span>MCP server</span><small>Local stdio setup and use</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md" target="_blank" rel="noopener noreferrer"><span>MCP tool contract</span><small>Eight local agent tools</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-context-pack-smoke.md" target="_blank" rel="noopener noreferrer"><span>Context-pack smoke</span><small>Synthetic local verification</small></a></li>
+            </ul>
+          </section>
+
+          <section class="docs-group reveal" aria-labelledby="group-status">
+            <div class="docs-group-heading">
+              <span aria-hidden="true">04</span>
+              <div><h3 id="group-status">Status and safety</h3><p>Know what is implemented, local, planned, or deliberately excluded.</p></div>
+            </div>
+            <ul>
+              <li><a href="https://github.com/innocarpe/carpeos#what-works-today" target="_blank" rel="noopener noreferrer"><span>What works today</span><small>Pre-MVP implementation table</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/versioning-and-releases.md" target="_blank" rel="noopener noreferrer"><span>Releases</span><small>SemVer, tags, and npm evidence</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/AGENTS.md" target="_blank" rel="noopener noreferrer"><span>Public boundary</span><small>No private sessions, paths, or credentials</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><span>Apache-2.0</span><small>Project license</small></a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta" aria-labelledby="closing-title">
+      <div class="container closing-inner reveal">
+        <div>
+          <span class="eyebrow">Ready to inspect</span>
+          <h2 id="closing-title">Start with a dry-run setup plan.</h2>
+        </div>
+        <div class="closing-actions">
+          <a class="button button-primary" href="../index.html#install">Install commands</a>
+          <a class="button button-secondary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Browse source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom docs-footer-bottom">
+      <a href="../index.html#top">← Back to CarpeOS</a>
+      <span>Public code. Private knowledge.</span>
+    </div>
+  </footer>
+</body>
+</html>

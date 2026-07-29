@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0B1020">
+  <meta name="description" content="CarpeOS captures context from AI-agent work, preserves provenance, and makes accepted knowledge searchable through local CLI, MCP, and rebuildable projections.">
+  <meta property="og:title" content="CarpeOS — Capture context. Compound knowledge.">
+  <meta property="og:description" content="A local-first personal knowledge system for people who work with AI agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://innocarpe.github.io/carpeos-website/">
+  <meta property="og:image" content="https://innocarpe.github.io/carpeos-website/assets/readme-hero.jpg">
+  <meta property="og:image:alt" content="A crystalline knowledge core connected to a network of nodes">
+  <title>CarpeOS — Capture context. Compound knowledge.</title>
+  <link rel="icon" href="assets/carpeos-mark.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="CarpeOS home">
+        <img src="assets/carpeos-mark.png" alt="" width="38" height="38">
+        <span>CarpeOS</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Open navigation" data-nav-toggle>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <div class="nav-links" id="primary-links" data-nav-links>
+        <a href="#why">Why</a>
+        <a href="#how">How it fits</a>
+        <a href="#interfaces">Interfaces</a>
+        <a href="#model">Trust model</a>
+        <a href="docs/index.html">Docs</a>
+        <a class="button button-small button-ghost" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="button button-small button-primary" href="#install">Install</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="top" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="status-pill reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            Pre-MVP · local-first · open source
+          </div>
+          <h1 id="hero-title" class="reveal">Capture context.<br><span>Compound knowledge.</span></h1>
+          <p class="hero-lede reveal">CarpeOS keeps the decisions, evidence, and failure paths from AI-agent work in one place you control — with provenance intact and status explicit.</p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#install">Install CarpeOS</a>
+            <a class="button button-secondary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="hero-note reveal">Public code. Private knowledge. Not hosted SaaS.</p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-frame">
+            <img src="assets/readme-hero.jpg" alt="A crystalline knowledge core connected to a network of smaller nodes" width="1672" height="941">
+            <div class="signal-card signal-card-one">
+              <span>accepted</span>
+              <strong>Decision with provenance</strong>
+            </div>
+            <div class="signal-card signal-card-two">
+              <span>retrievable</span>
+              <strong>Context for the next agent</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container trust-strip reveal" aria-label="Core principles">
+        <span>Append-only events</span>
+        <span>Explicit acceptance</span>
+        <span>Local by default</span>
+        <span>Rebuildable projections</span>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Why CarpeOS</span>
+          <h2 id="why-title">Your most valuable context should not disappear with the session.</h2>
+          <p>A real decision, a rejected approach, or a bug path often ends up split across chat history, terminal scrollback, and notes. CarpeOS keeps the trail without flattening every statement into “memory.”</p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card reveal">
+            <span class="card-index">01</span>
+            <h3>History without trust</h3>
+            <p>Agent transcripts mix facts, guesses, drafts, and abandoned paths.</p>
+            <div class="card-resolution">Keep evidence, claims, acceptance, and supersession as separate records.</div>
+          </article>
+          <article class="problem-card reveal">
+            <span class="card-index">02</span>
+            <h3>Knowledge in silos</h3>
+            <p>Each coding tool starts with a different memory of the work.</p>
+            <div class="card-resolution">Capture into a provider-neutral event trail and retrieve through shared interfaces.</div>
+          </article>
+          <article class="problem-card reveal">
+            <span class="card-index">03</span>
+            <h3>Notes become authority</h3>
+            <p>Generated documents drift until no one knows what was canonical.</p>
+            <div class="card-resolution">Treat notes, indexes, and context packs as rebuildable projections.</div>
+          </article>
+          <article class="problem-card reveal">
+            <span class="card-index">04</span>
+            <h3>Continuity breaks</h3>
+            <p>The next machine or session has to rediscover the same decisions.</p>
+            <div class="card-resolution">Use a local-first store with optional private, operator-run sync.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-heading section-heading-split reveal">
+          <div>
+            <span class="eyebrow">How it fits</span>
+            <h2 id="how-title">Capture once. Reuse with the trail attached.</h2>
+          </div>
+          <p>Provider hooks feed a private canonical event store. Accepted facts are derived at query time; MCP, CLI, and Obsidian remain interfaces and projections.</p>
+        </div>
+
+        <figure class="architecture-frame reveal">
+          <img src="assets/architecture-flow.svg" alt="CarpeOS flow from agent hooks through capture, canonicalization, retrieval, and MCP, CLI, and Obsidian interfaces" width="1120" height="420">
+        </figure>
+
+        <ol class="process-grid" aria-label="CarpeOS flow">
+          <li class="process-step reveal">
+            <span>1</span>
+            <div><h3>Capture</h3><p>Selected lifecycle events enter an encrypted outbox and local store.</p></div>
+          </li>
+          <li class="process-step reveal">
+            <span>2</span>
+            <div><h3>Canonicalize</h3><p>Evidence, observations, claims, decisions, and supersession keep distinct roles.</p></div>
+          </li>
+          <li class="process-step reveal">
+            <span>3</span>
+            <div><h3>Retrieve</h3><p>Search and context packs return bounded results with provenance rechecked.</p></div>
+          </li>
+          <li class="process-step reveal">
+            <span>4</span>
+            <div><h3>Use</h3><p>People and agents work through CLI, local MCP, and rebuildable projections.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="interfaces" aria-labelledby="interfaces-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Local interfaces</span>
+          <h2 id="interfaces-title">The same knowledge trail, available where work happens.</h2>
+          <p>Current interfaces are local and pre-MVP. They expose the same underlying model without turning a projection into the source of truth.</p>
+        </div>
+
+        <div class="interface-grid">
+          <article class="interface-card interface-card-featured reveal">
+            <div class="interface-icon" aria-hidden="true">›_</div>
+            <span class="interface-label">CLI</span>
+            <h3>Search, retrieve, and build context packs.</h3>
+            <p>Use local commands for memory search, individual records, and bounded task context.</p>
+            <code>carpeos memory context-pack</code>
+          </article>
+          <article class="interface-card reveal">
+            <div class="interface-icon" aria-hidden="true">{ }</div>
+            <span class="interface-label">MCP · stdio</span>
+            <h3>Eight local tools for agents.</h3>
+            <p>Trace evidence, capture observations, propose claims, and retrieve context through a local stdio server.</p>
+            <code>memory_context_pack</code>
+          </article>
+          <article class="interface-card reveal">
+            <div class="interface-icon" aria-hidden="true">◇</div>
+            <span class="interface-label">Obsidian projection</span>
+            <h3>Readable notes without changing authority.</h3>
+            <p>Generate Markdown from the local store. Delete and rebuild it whenever the projection drifts.</p>
+            <code>projection ≠ source of truth</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="model" aria-labelledby="model-title">
+      <div class="container model-grid">
+        <div class="model-copy reveal">
+          <span class="eyebrow">Trust model</span>
+          <h2 id="model-title">A model suggestion is not automatically a fact.</h2>
+          <p>CarpeOS preserves the difference between what was observed, what was proposed, what was accepted, and what was later replaced.</p>
+          <ul class="check-list">
+            <li>Accepted status is derived at query time.</li>
+            <li>After acceptance, the event log is append-only.</li>
+            <li>Sensitive plaintext stays outside the event body.</li>
+            <li>Trust zones are isolation boundaries, not decorative labels.</li>
+          </ul>
+        </div>
+
+        <div class="model-stack reveal" aria-label="Knowledge status progression">
+          <div class="model-node"><span>Evidence</span><small>what can be inspected</small></div>
+          <div class="model-arrow" aria-hidden="true">↓</div>
+          <div class="model-node"><span>Observation</span><small>what was seen</small></div>
+          <div class="model-arrow" aria-hidden="true">↓</div>
+          <div class="model-node model-node-accent"><span>Claim</span><small>what is proposed</small></div>
+          <div class="model-branch">
+            <div class="model-node"><span>Acceptance</span><small>what was decided</small></div>
+            <div class="model-node"><span>Supersession</span><small>what replaced it</small></div>
+          </div>
+          <div class="model-result">Accepted facts, derived with provenance</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-install" id="install" aria-labelledby="install-title">
+      <div class="container install-grid">
+        <div class="install-copy reveal">
+          <span class="eyebrow">Get started</span>
+          <h2 id="install-title">Install locally. See the plan before applying it.</h2>
+          <p>CarpeOS requires Node.js 22.22 or newer. The setup flow can show resolved paths and actions before it changes anything.</p>
+          <div class="install-links">
+            <a href="docs/index.html">Open the docs hub <span aria-hidden="true">→</span></a>
+            <a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md" target="_blank" rel="noopener noreferrer">Full install guide <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+
+        <div class="terminal reveal" aria-label="Install commands">
+          <div class="terminal-bar">
+            <span class="terminal-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>terminal</span>
+            <button class="copy-button" type="button" data-copy-target="install-code" aria-live="polite" aria-atomic="true">Copy</button>
+          </div>
+          <pre id="install-code"><code><span class="comment"># install the published package</span>
+npm install -g @innocarpe/carpeos
+
+<span class="comment"># inspect actions first</span>
+carpeos setup plan
+
+<span class="comment"># apply the resolved setup</span>
+carpeos setup run --apply</code></pre>
+          <p class="terminal-footnote">Pre-MVP. Local interfaces are implemented; no hosted Worker, hosted MCP, or SaaS deployment is claimed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="docs" aria-labelledby="docs-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Documentation</span>
+          <h2 id="docs-title">Start with the model. Go deeper when you need to.</h2>
+          <p>The website stays intentionally small. Detailed contracts, guides, ADRs, and implementation status live with the public source.</p>
+        </div>
+
+        <div class="docs-grid">
+          <a class="docs-card reveal" href="docs/index.html">
+            <span>Website guide</span>
+            <h3>Documentation hub</h3>
+            <p>A focused map of architecture, installation, capture, retrieval, and MCP references.</p>
+            <strong>Open locally <span aria-hidden="true">→</span></strong>
+          </a>
+          <a class="docs-card reveal" href="https://github.com/innocarpe/carpeos/blob/main/docs/architecture/overview.md" target="_blank" rel="noopener noreferrer">
+            <span>System design</span>
+            <h3>Architecture overview</h3>
+            <p>Follow the event model, trust boundaries, storage layers, and projection rules.</p>
+            <strong>Read on GitHub <span aria-hidden="true">↗</span></strong>
+          </a>
+          <a class="docs-card reveal" href="https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md" target="_blank" rel="noopener noreferrer">
+            <span>Agent interface</span>
+            <h3>MCP tool contract</h3>
+            <p>Review the local stdio tools and the contracts agents can rely on.</p>
+            <strong>Read on GitHub <span aria-hidden="true">↗</span></strong>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta" aria-labelledby="closing-title">
+      <div class="container closing-inner reveal">
+        <div>
+          <span class="eyebrow">Keep the trail</span>
+          <h2 id="closing-title">Give the next session more than a transcript.</h2>
+        </div>
+        <div class="closing-actions">
+          <a class="button button-primary" href="#install">Install CarpeOS</a>
+          <a class="button button-secondary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">View source</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <img src="assets/carpeos-mark.png" alt="" width="34" height="34">
+          <span>CarpeOS</span>
+        </a>
+        <p>A local-first personal knowledge system for people who work with AI agents.</p>
+      </div>
+      <div class="footer-links">
+        <div><strong>Explore</strong><a href="#how">How it fits</a><a href="#interfaces">Interfaces</a><a href="docs/index.html">Docs</a></div>
+        <div><strong>Project</strong><a href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Source</a><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> CarpeOS</span>
+      <span>Public code. Private knowledge.</span>
+    </div>
+  </footer>
+</body>
+</html>
