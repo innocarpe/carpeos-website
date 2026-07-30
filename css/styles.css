@@ -1217,9 +1217,20 @@ button:focus-visible {
   box-shadow: var(--shadow-soft);
 }
 
+.closing-inner > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+
 .closing-inner h2 {
-  max-width: 700px;
+  max-width: 780px;
   margin-bottom: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+  overflow-wrap: normal;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 .closing-actions {
