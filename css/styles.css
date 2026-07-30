@@ -438,6 +438,7 @@ button:focus-visible {
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
   .hero h1 span {
     background: linear-gradient(100deg, var(--accent-0), #83a0ff 43%, var(--accent-1));
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
@@ -1596,10 +1597,8 @@ button:focus-visible {
   *::before,
   *::after {
     scroll-behavior: auto !important;
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    transition-delay: 0ms !important;
+    animation: none !important;
+    transition: none !important;
   }
 
   .reveal-ready .reveal,

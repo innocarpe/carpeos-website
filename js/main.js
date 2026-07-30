@@ -26,8 +26,6 @@
     if (!toggle || !links) return;
 
     var firstLink = links.querySelector('a');
-    root.classList.add('nav-enhanced');
-    links.setAttribute('data-open', 'false');
 
     function setOpen(open, returnFocus) {
       links.setAttribute('data-open', String(open));
@@ -43,27 +41,41 @@
       }
     }
 
-    toggle.addEventListener('click', function () {
+    function handleToggle() {
       setOpen(links.getAttribute('data-open') !== 'true', false);
-    });
+    }
 
-    selectAll('a', links).forEach(function (link) {
-      link.addEventListener('click', function () {
-        setOpen(false, false);
-      });
-    });
+    function handleLink() {
+      setOpen(false, false);
+    }
 
-    document.addEventListener('keydown', function (event) {
+    function handleKeydown(event) {
       if (event.key === 'Escape' && links.getAttribute('data-open') === 'true') {
         setOpen(false, true);
       }
-    });
+    }
 
-    window.addEventListener('resize', function () {
+    function handleResize() {
       if (window.innerWidth > 820 && links.getAttribute('data-open') === 'true') {
         setOpen(false, false);
       }
-    }, { passive: true });
+    }
+
+    try {
+      toggle.addEventListener('click', handleToggle);
+      selectAll('a', links).forEach(function (link) {
+        link.addEventListener('click', handleLink);
+      });
+      document.addEventListener('keydown', handleKeydown);
+      window.addEventListener('resize', handleResize, { passive: true });
+
+      setOpen(false, false);
+      root.classList.add('nav-enhanced');
+    } catch (error) {
+      root.classList.remove('nav-enhanced');
+      links.removeAttribute('data-open');
+      console.warn('CarpeOS navigation enhancement unavailable; links left expanded.', error);
+    }
   }
 
   function showEveryReveal() {
@@ -140,10 +152,14 @@
       var resetTimer = null;
       var copying = false;
 
-      function finish(copied, error) {
+      function finish(copied, error, restoreFocus) {
         copying = false;
         button.disabled = false;
         button.textContent = copied ? 'Copied' : 'Select and copy';
+
+        if (restoreFocus) {
+          button.focus({ preventScroll: true });
+        }
 
         if (error) {
           console.warn('CarpeOS could not copy the install commands automatically.', error);
@@ -156,12 +172,13 @@
       }
 
       button.addEventListener('click', function () {
+        var restoreFocus = document.activeElement === button;
         if (copying) return;
 
         var targetId = button.getAttribute('data-copy-target');
         var target = document.getElementById(targetId);
         if (!target) {
-          finish(false, new Error('Copy target not found: ' + targetId));
+          finish(false, new Error('Copy target not found: ' + targetId), restoreFocus);
           return;
         }
 
@@ -172,14 +189,14 @@
 
         if (navigator.clipboard && window.isSecureContext) {
           navigator.clipboard.writeText(text).then(function () {
-            finish(true, null);
+            finish(true, null, restoreFocus);
           }).catch(function (clipboardError) {
             var fallback = legacyCopy(text);
             if (fallback.copied) {
               console.warn('Clipboard API failed; the legacy copy path succeeded.', clipboardError);
-              finish(true, null);
+              finish(true, null, restoreFocus);
             } else {
-              finish(false, fallback.error || clipboardError);
+              finish(false, fallback.error || clipboardError, restoreFocus);
             }
           });
         } else {
@@ -188,7 +205,7 @@
           if (!fallback.copied && !fallbackError) {
             fallbackError = new Error('Legacy copy command returned false.');
           }
-          finish(fallback.copied, fallbackError);
+          finish(fallback.copied, fallbackError, restoreFocus);
         }
       });
     });
