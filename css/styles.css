@@ -898,6 +898,9 @@ button:focus-visible {
 }
 
 .install-links a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   color: var(--text-0);
   font-weight: 750;
 }
@@ -949,6 +952,8 @@ button:focus-visible {
 
 .copy-button {
   justify-self: end;
+  min-width: 44px;
+  min-height: 44px;
   padding: 7px 10px;
   border: 1px solid var(--stroke);
   border-radius: 8px;
@@ -1083,8 +1088,10 @@ button:focus-visible {
 }
 
 .docs-hero-card a {
-  display: inline-block;
+  display: inline-flex;
+  min-height: 44px;
   margin-top: 22px;
+  align-items: center;
   color: var(--text-0);
   font-size: 0.85rem;
   font-weight: 800;
