@@ -1199,6 +1199,15 @@ button:focus-visible {
 .closing-cta {
   padding: 0 0 96px;
 }
+.section.docs-directory {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.docs-directory + .closing-cta {
+  padding-top: calc(clamp(20px, 2vw, 28px) + clamp(64px, 7vw, 96px) + 24px);
+  background: linear-gradient(180deg, var(--bg-1) 0, var(--bg-0) 140px);
+}
 
 .closing-inner {
   display: flex;
