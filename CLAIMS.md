@@ -3,73 +3,81 @@
 ## Ledger metadata
 
 - Source repository: <https://github.com/innocarpe/carpeos>
-- Immutable source commit: `699dcdfbf45804f20e6b4cd6f5ddc7f23b1dca94`
-- Immutable source document: `README.md` at that commit
-- Release review: `innocarpe` · 2026-07-29
+- Immutable source commit (release tag `v3.2.0`): `59328c0eb28096a8921ae5c7c8af4b06aa32dbc5`
+- Immutable source document: `README.md` at that commit (plus `CHANGELOG.md`, product DoDs, and MCP contract)
+- Asset digests remain pinned to the original website provenance commit for binary assets (see `PROVENANCE.md`)
+- Release review: `innocarpe` · 2026-08-05
 - Default disposition unless noted: `APPROVED`
 
-Line ranges below refer to the immutable source document. Each row covers one rendered factual sentence, status, command, or destination family. Repeated navigation links use the same approved destination row.
+Line ranges below refer to the immutable source documents at `v3.2.0` unless noted. Each row covers one rendered factual sentence, status, command, or destination family. Repeated navigation links use the same approved destination row.
 
 ## Landing-page claims
 
 | ID | Rendered claim or command | Classification | Immutable evidence | Release-time observation | Reviewer · date · disposition |
 |---|---|---|---|---|---|
-| `landing-status` | “Pre-MVP · local-first · open source” | pre-MVP / local-only | `README.md:L5-L11`, `L286-L315` | Public source and release exist; hosted product deployment is not claimed | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `landing-hero-summary` | CarpeOS keeps decisions, evidence, and failure paths from AI-agent work with provenance and explicit status. | implemented model / neutral positioning | `README.md:L11-L15`, `L29-L44`, `L77-L82` | Copy remains within the pinned model and current local implementation | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `landing-public-private` | “Public code. Private knowledge. Not hosted SaaS.” | public boundary / not deployed | `README.md:L46-L48`, `L64-L65`, `L313-L318`, `L322-L331` | Public repository confirmed; no hosted SaaS claim made | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `principle-append-only` | “Append-only events” | implemented model | `README.md:L40-L41`, `L153-L160` | Model claim only; no hosted claim | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `principle-acceptance` | “Explicit acceptance” | implemented model | `README.md:L41-L41`, `L77-L91`, `L153-L160` | Acceptance remains separate and query-derived | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `principle-local` | “Local by default” | local-only | `README.md:L44-L44`, `L61-L65`, `L103-L107` | Local runtime path is current; private sync is optional | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `principle-projections` | “Rebuildable projections” | implemented model / local-only | `README.md:L43-L44`, `L100-L107`, `L159-L160` | Obsidian is a local projection, not canonical knowledge | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `why-context-loss` | Valuable decisions and bug paths are split across chat history, terminal scrollback, and notes. | problem statement | `README.md:L27-L36` | Neutral product rationale | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `why-history-trust` | Agent history mixes facts, guesses, drafts, and abandoned paths; records keep evidence, claims, acceptance, and supersession distinct. | implemented model | `README.md:L34-L44`, `L77-L82` | Model distinction remains current | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `why-tool-silos` | Provider-neutral capture and shared MCP retrieval reduce separate tool-memory silos. | local-only | `README.md:L42-L42`, `L71-L75`, `L94-L101` | Codex, Claude Code, and Grok Build templates plus local MCP are in the source | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `why-projection-authority` | Notes and indexes are rebuildable projections rather than canonical authority. | implemented model | `README.md:L43-L43`, `L100-L107`, `L159-L160` | Projection claim remains current | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `why-private-sync` | A local-first store may use optional private, operator-run sync. | optional self-hosted | `README.md:L44-L44`, `L61-L65`, `L103-L107`, `L301-L315` | Sync code and local tests exist; no production deploy is claimed | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `how-system` | Provider hooks feed a canonical event trail; accepted facts are query-derived; MCP, CLI, and Obsidian are interfaces/projections. | local-only / implemented model | `README.md:L71-L107`, `L141-L160` | Local path is implemented and synthetically tested | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `how-capture` | Selected lifecycle events enter an encrypted outbox and local store. | local-only | `README.md:L71-L75`, `L103-L120`, `L288-L300` | Local capture and outbox are implemented with synthetic tests | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `how-canonicalize` | Evidence, observations, claims, decisions, and supersession keep distinct roles. | implemented model | `README.md:L77-L91`, `L153-L160` | Ontology/model statement remains current | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `how-retrieve` | Search and context packs return bounded results with provenance rechecked. | local-only | `README.md:L94-L101`, `L169-L186`, `L286-L305` | Local retrieval and expert-slot context packs are implemented | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `how-use` | People and agents use the local trail through CLI, MCP, and rebuildable projections. | local-only | `README.md:L94-L107`, `L141-L160` | Interfaces remain local | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `interfaces-status` | Current interfaces are local and pre-MVP and share the same underlying model. | pre-MVP / local-only | `README.md:L94-L107`, `L286-L315` | Current release remains pre-MVP | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `interface-cli` | CLI supports search, individual retrieval, and bounded context packs. | local-only | `README.md:L94-L101`, `L241-L247`, `L302-L305` | Published CLI `0.2.0` was invoked successfully | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `interface-mcp` | MCP over stdio exposes eight local tools. | local-only | `README.md:L94-L101`, `L303-L304` | Source and docs still describe eight local tools | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `interface-obsidian` | Obsidian Markdown is generated from the local store and is rebuildable. | local-only / projection | `README.md:L100-L107`, `L159-L160`, `L307-L307` | Projection package is local only | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `model-not-fact` | A model suggestion is not automatically a fact. | implemented model | `README.md:L34-L36`, `L77-L91` | Model semantics only | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `model-query-derived` | Accepted status is derived at query time. | implemented model | `README.md:L84-L91`, `L141-L160` | Model semantics only | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `model-append-only` | After acceptance, the event log is append-only. | implemented model | `README.md:L153-L160` | Model semantics only | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `model-sensitive-boundary` | Sensitive plaintext stays outside the event body. | implemented safety boundary | `README.md:L153-L160`, `L322-L331` | Public boundary review found no runtime/private material in this website | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `model-trust-zones` | Trust zones are isolation boundaries rather than decorative labels. | implemented safety model | `README.md:L153-L160` | Model semantics only | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `install-node` | CarpeOS requires Node.js 22.22 or newer. | current prerequisite | `README.md:L5-L7`, `L190-L200` | npm `@innocarpe/carpeos@0.2.0` reports `engines.node >=22.22.0`; tested with Node `v22.22.0` | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `install-npm` | `npm install -g @innocarpe/carpeos` | release-verified command | `README.md:L194-L204` | `@innocarpe/carpeos@0.2.0` installed into an isolated temporary prefix | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `install-plan` | `carpeos setup plan` | release-verified non-mutating command | `README.md:L194-L220` | Published `0.2.0` printed resolved paths/actions with isolated `--home`, `--bin-dir`, `--workspace-root`, and `--register-mcp none`; no changes in plan mode | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `install-apply` | `carpeos setup run --apply` | release-verified mutating command | `README.md:L194-L220` | Published `0.2.0` applied only inside isolated temporary directories; wrappers, config, and local store were created. The follow-up doctor reported expected unregistered-host failures under `--register-mcp none`, so the website makes no doctor-success claim. | `innocarpe` · 2026-07-29 · `APPROVED_WITH_CAVEAT` |
-| `install-hosting-boundary` | “Pre-MVP. Local interfaces are implemented; no hosted Worker, hosted MCP, or SaaS deployment is claimed.” | pre-MVP / local-only / not deployed | `README.md:L286-L318` | No hosted capability is presented as live | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-scope` | Detailed contracts, guides, ADRs, and implementation status live with the public source. | neutral destination statement | `README.md:L162-L167`, `L250-L277`, `L286-L318`, `L345-L348` | All rendered GitHub destinations returned HTTP 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `footer-description` | CarpeOS is a local-first personal knowledge system for people who work with AI agents. | neutral positioning / local-first | `README.md:L9-L15`, `L61-L65` | Source description remains current | `innocarpe` · 2026-07-29 · `APPROVED` |
+| `landing-status` | “v3.2 · local-first · open source” | shipped release / local-only | `README.md` latest release line; `CHANGELOG.md` `[3.2.0]`; npm `@innocarpe/carpeos@3.2.0` | Public package `3.2.0` is published; hosted product deployment is not claimed | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `landing-hero-summary` | CarpeOS captures agent sessions with provenance, adjudicates durable meaning, and returns promoted knowledge with explicit status. | implemented model / local-only | `README.md` intro + adjudication section + product line table | Copy matches shipped 2.0 adjudication + 3.x retrieval path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `landing-public-private` | “Public code. Private knowledge. Not hosted SaaS.” | public boundary / not deployed | `README.md` public/private callout; What works today NOT DEPLOYED | Public repository confirmed; no hosted SaaS claim made | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `principle-append-only` | “Append-only events” | implemented model | `README.md` “How it fits together” rules | Model claim only; no hosted claim | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `principle-adjudication` | “Adjudicated meaning” | implemented model / local-only | `README.md` Adjudicate before “memory”; `CHANGELOG.md` 2.0/3.2 | `adj_v3` shipped in 3.2 | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `principle-promoted` | “Promoted-only default” | implemented model / local-only | `README.md` default search promoted/active only | Held requires explicit opt-in | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `principle-projections` | “Rebuildable projections” | implemented model / local-only | `README.md` projections and OKF export | Obsidian and OKF are projections, not canonical | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `why-context-loss` | Valuable decisions and bug paths are split across chat history, terminal scrollback, and notes. | problem statement | `README.md` Why this exists | Neutral product rationale | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `why-history-trust` | Agent history mixes facts, guesses, drafts, and abandoned paths; records keep evidence, claims, acceptance, and supersession distinct. | implemented model | `README.md` model section | Model distinction remains current | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `why-session-noise` | Not every lifecycle event should become searchable meaning; adjudicate promote/hold/reject with promoted-only default search. | implemented model / local-only | `README.md` Adjudicate before “memory”; `CHANGELOG.md` 2.0.0 | Shipped adjudication path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `why-tool-silos` | Provider-neutral capture and shared MCP retrieval reduce separate tool-memory silos. | local-only | `README.md` capture + interfaces | Codex, Claude Code, and Grok Build templates plus local MCP are in the source | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `why-projection-authority` | Notes and indexes are rebuildable projections rather than canonical authority. | implemented model | `README.md` projections rules | Projection claim remains current | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `how-system` | Provider hooks feed a private event store; adjudication assigns promote/hold/reject; default retrieval returns promoted meaning; MCP, CLI, and projections are interfaces. | local-only / implemented model | `README.md` How it fits + What works today loop | Local path is implemented and smoke-tested | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `how-capture` | Selected lifecycle events enter an encrypted outbox and local store; host hooks stay fail-open and fast. | local-only | `README.md` Capture from tools | Local capture and outbox are implemented | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `how-adjudicate` | Post-capture rules assign promote, hold, or reject; held items wait for operator review; nothing auto-accepts a claim. | local-only / implemented model | `README.md` adjudication table; product 3.2 DoD | Automatic Claim / AcceptanceDecision creation remains off | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `how-retrieve` | Default search is promoted/active only; local graph and hybrid ranking return bounded results with provenance rechecked. | local-only | `README.md` product 3.0 + retrieval; `CHANGELOG.md` 3.0.0 | Retrieval-first graph/hybrid recall shipped in 3.0; hosted graph adapters remain planned | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `how-use` | People and agents use CLI, local MCP, Obsidian notes, and OKF export projections. | local-only | `README.md` Interfaces section | Interfaces remain local | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `interfaces-status` | Interfaces are local and share the same underlying model; projections can be rebuilt. | local-only | `README.md` Interfaces + What works today | No hosted interface claimed | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `interface-cli` | CLI supports capture, adjudication, search, rebuild, and context packs. | local-only | `README.md` CLI bullet list | Published CLI `3.2.0` surfaces include `adjudicate`, `memory`, `okf` | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `interface-mcp` | MCP over stdio exposes nine local tools, including `memory_neighborhood`. | local-only | `docs/contracts/mcp-tools-v1.json` (9 tools); `apps/carpeos-mcp-server/src/tools.ts` `CARPEOS_MCP_TOOLS` | Runtime inventory is nine tools at `v3.2.0` | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `interface-obsidian` | Obsidian Markdown is generated from the local store and is rebuildable. | local-only / projection | `README.md` Obsidian projection | Projection package is local only | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `interface-okf` | OKF v0.2 export writes a trust-zone-scoped, promoted-by-default portable bundle; export only, not import or canonical storage. | local-only / projection | `README.md` OKF bullet; `docs/guides/okf-export.md`; `CHANGELOG.md` 3.1.0 | Shipped in 3.1; activation exercised export/rebuild synthetically for 3.2 | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-not-fact` | A model suggestion is not automatically a fact. | implemented model | `README.md` model language | Model semantics only | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-promoted-default` | Default search is promoted and active only; held drafts require opt-in. | implemented model | `README.md` adjudication + retrieval defaults | Held opt-in flags documented | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-append-only` | Dispositions and events are append-only by policy version. | implemented model | `README.md` How it fits rules; `CHANGELOG.md` 2.0/3.2 | Model semantics only | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-query-derived` | Accepted status is derived at query time. | implemented model | `README.md` acceptance rules | Model semantics only | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-sensitive-boundary` | Sensitive plaintext stays outside the event body. | implemented safety boundary | `README.md` rules + public boundary | Public boundary review found no runtime/private material in this website | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `model-trust-zones` | Trust zones are isolation boundaries rather than decorative labels. | implemented safety model | `README.md` rules | Model semantics only | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-node` | CarpeOS requires Node.js 22.22 or newer. | current prerequisite | `README.md` Install; npm engines `>=22.22.0` | npm `@innocarpe/carpeos@3.2.0` reports `engines.node >=22.22.0` | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-npm` | `npm install -g @innocarpe/carpeos` | release-verified command | `README.md` Install; product 3.2 activation | `@innocarpe/carpeos@3.2.0` is published on npm | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-pin` | Pin `@innocarpe/carpeos@3.2.0` for a fixed release. | release pin guidance | `README.md` pin note | Exact version exists on registry | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-plan` | `carpeos setup plan` | release-verified non-mutating command | `README.md` setup surface | Plan mode remains non-mutating without `--apply` | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-apply` | `carpeos setup run --apply` | release-verified mutating command | `README.md` setup; product 3.2 activation | Product 3.2 activation exercised setup/doctor on a disposable home | `innocarpe` · 2026-08-05 · `APPROVED_WITH_CAVEAT` |
+| `install-hooks` | `carpeos setup hooks install --apply` | release-documented mutating command | `README.md` product path | Merge-safe hooks install is the documented product path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `install-hosting-boundary` | “Local-first. Interfaces ship on your machine; no hosted Worker, hosted MCP, or SaaS deployment is claimed.” | local-only / not deployed | `README.md` What works today NOT DEPLOYED | No hosted capability is presented as live | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-scope` | Detailed contracts, guides, ADRs, and implementation status live with the public source. | neutral destination statement | `README.md` documentation index | All rendered GitHub destinations are public paths | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `footer-description` | CarpeOS is a local-first personal knowledge OS for people who work with AI agents. | neutral positioning / local-first | `README.md` intro | Source description remains current | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `footer-version` | Footer release link → `https://github.com/innocarpe/carpeos/releases/tag/v3.2.0` | current release destination | GitHub Release `v3.2.0`; npm `3.2.0` | Non-draft, non-prerelease release exists | `innocarpe` · 2026-08-05 · `APPROVED` |
 
 ## Documentation-hub claims and destinations
 
 | ID | Rendered claim or destination | Classification | Immutable evidence | Release-time observation | Reviewer · date · disposition |
 |---|---|---|---|---|---|
-| `docs-status` | CarpeOS is pre-MVP and local-first; implementation status, contracts, ADRs, and verification live in the public source. | pre-MVP / local-only | `README.md:L5-L15`, `L162-L167`, `L286-L318`, `L345-L352` | Public destinations returned HTTP 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-model-summary` | Evidence is not a claim; projections are not canonical; accepted status is provenance-derived. | implemented model | `README.md:L77-L91`, `L141-L160` | Model summary remains within source semantics | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-architecture` | Architecture overview → `https://github.com/innocarpe/carpeos/blob/main/docs/architecture/overview.md` | current public destination | `README.md:L162-L167` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-memory-capacity` | Memory capacity → `https://github.com/innocarpe/carpeos/blob/main/docs/architecture/memory-capacity.md` | current public destination | `README.md:L162-L186` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-adrs` | Architecture decisions → `https://github.com/innocarpe/carpeos/tree/main/docs/adr` | current public destination | `README.md:L162-L167` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-spec` | v1 specification → `https://github.com/innocarpe/carpeos/tree/main/spec/v1` | current public destination | `README.md:L162-L167` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-install` | One-stop install → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md` | current public destination | `README.md:L250-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-capture` | Local capture → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/local-capture.md` | current public destination | `README.md:L250-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-adapters` | Provider adapters → `https://github.com/innocarpe/carpeos/tree/main/adapters` | current public destination / local capture | `README.md:L71-L75`, `L250-L254` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-retrieval` | Retrieval guide → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/retrieval.md` | current public destination / local-only | `README.md:L269-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-mcp-guide` | MCP server → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-server.md` | current public destination / local-only | `README.md:L250-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-mcp-contract` | MCP tool contract → `https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md` | current public destination / local-only | `README.md:L269-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-mcp-smoke` | Context-pack smoke → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-context-pack-smoke.md` | current public destination / synthetic verification | `README.md:L250-L277` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-works-today` | What works today → `https://github.com/innocarpe/carpeos#what-works-today` | current status destination | `README.md:L286-L318` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-releases` | Releases → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/versioning-and-releases.md` | current public destination | `README.md:L265-L277`, `L313-L315` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-public-boundary` | Public boundary → `https://github.com/innocarpe/carpeos/blob/main/AGENTS.md` | current safety destination | `README.md:L322-L331`, `L345-L348` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `docs-license` | Apache-2.0 → `https://github.com/innocarpe/carpeos/blob/main/LICENSE` | current license destination | `README.md:L364-L366` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
-| `project-source` | Source / GitHub CTAs → `https://github.com/innocarpe/carpeos` | current public destination | `README.md:L46-L48`, `L322-L331`, `L345-L348` | Redirect-following GET returned 200 | `innocarpe` · 2026-07-29 · `APPROVED` |
+| `docs-status` | CarpeOS is local-first and open source; current public package is `@innocarpe/carpeos@3.2.0`; contracts, ADRs, product DoDs, and verification live in the public source. | shipped release / local-only | `README.md` latest release + What works today | Public destinations are versioned with source | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-model-summary` | Evidence is not a claim; default search is promoted only; projections are not canonical; accepted status is provenance-derived. | implemented model | `README.md` adjudication + rules | Model summary remains within source semantics | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-architecture` | Architecture overview → `https://github.com/innocarpe/carpeos/blob/main/docs/architecture/overview.md` | current public destination | `README.md` architecture links | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-memory-capacity` | Memory capacity → `https://github.com/innocarpe/carpeos/blob/main/docs/architecture/memory-capacity.md` | current public destination | `README.md` memory capacity | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-adrs` | Architecture decisions → `https://github.com/innocarpe/carpeos/tree/main/docs/adr` | current public destination | `README.md` ADRs | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-spec` | v1 specification → `https://github.com/innocarpe/carpeos/tree/main/spec/v1` | current public destination | `README.md` spec/v1 | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-install` | One-stop install → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md` | current public destination | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-capture` | Local capture → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/local-capture.md` | current public destination | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-adapters` | Provider adapters → `https://github.com/innocarpe/carpeos/tree/main/adapters` | current public destination / local capture | `README.md` adapters | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-retrieval` | Retrieval guide → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/retrieval.md` | current public destination / local-only | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-mcp-guide` | MCP server → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-server.md` | current public destination / local-only | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-mcp-contract` | MCP tool contract → `https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md` | current public destination / local-only | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-okf` | OKF export → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/okf-export.md` | current public destination / local-only | `README.md` guides table; `CHANGELOG.md` 3.1.0 | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-mcp-smoke` | Context-pack smoke → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-context-pack-smoke.md` | current public destination / synthetic verification | `README.md` guides table | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-works-today` | What works today → `https://github.com/innocarpe/carpeos#what-works-today` | current status destination | `README.md` What works today | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-product-32` | Product 3.2 DoD → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/product-3.2.0.md` | current product destination | `README.md` product line; product 3.2 DoD | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-releases` | Releases → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/versioning-and-releases.md` | current public destination | `README.md` versioning | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-public-boundary` | Public boundary → `https://github.com/innocarpe/carpeos/blob/main/AGENTS.md` | current safety destination | `README.md` contributing / boundary | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `docs-license` | Apache-2.0 → `https://github.com/innocarpe/carpeos/blob/main/LICENSE` | current license destination | `README.md` License | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
+| `project-source` | Source / GitHub CTAs → `https://github.com/innocarpe/carpeos` | current public destination | `README.md` repo identity | Public path | `innocarpe` · 2026-08-05 · `APPROVED` |
 
 ## Internal destination ledger
 
@@ -83,16 +91,16 @@ These paths are site navigation, not product-capability claims. `scripts/validat
 
 ## Release-time verification
 
-Verified on 2026-07-29:
+Verified on 2026-08-05 against product `3.2.0`:
 
-- Immutable GitHub Release: <https://github.com/innocarpe/carpeos/releases/tag/v0.2.0> (`v0.2.0`, not a draft or prerelease).
-- Version-specific npm metadata: <https://registry.npmjs.org/@innocarpe%2Fcarpeos/0.2.0> (`@innocarpe/carpeos@0.2.0`, Node.js `>=22.22.0`).
-- Immutable installer source: <https://raw.githubusercontent.com/innocarpe/carpeos/699dcdfbf45804f20e6b4cd6f5ddc7f23b1dca94/scripts/install.sh>.
-- The immutable installer, current public `main`, and live raw installer matched SHA-256 `39cb8f67f15c24d6fc4721ce8ec27d1147f8a33853d66729cb5f923e7616d677`.
-- The published package was installed into an isolated temporary prefix. `carpeos version`, `carpeos setup --help`, `carpeos setup plan`, and `carpeos setup run --apply` were exercised with temporary home/bin/workspace paths and MCP registration disabled.
-- `setup run --apply` created the intended isolated wrappers, config, and store. A separate `setup doctor` reported unregistered Claude/Codex/Grok hosts under the deliberate `--register-mcp none` test mode; no doctor-success claim appears on the website.
-- Sixteen unique rendered GitHub documentation/source destinations returned HTTP 200 with redirects followed.
+- Immutable GitHub Release: <https://github.com/innocarpe/carpeos/releases/tag/v3.2.0> (`v3.2.0`, not a draft or prerelease).
+- Version-specific npm metadata: <https://registry.npmjs.org/@innocarpe%2Fcarpeos/3.2.0> (`@innocarpe/carpeos@3.2.0`, Node.js `>=22.22.0`).
+- Annotated tag commit: `59328c0eb28096a8921ae5c7c8af4b06aa32dbc5`.
+- npm package integrity (registry): `sha512-oYDa+cEOp6LrStkoWOK5KHZDJU90QT2Sry+umNxIMi2gfSrfMSLPq5g4AdIBBe8askaSlt7VCcPaY1THAeHAww==`.
+- Product 3.2 activation receipt in `docs/maintainers/product-3.2.0.md` records disposable synthetic activation of setup/doctor, dogfood smoke, and OKF export/rebuild for `@innocarpe/carpeos@3.2.0`.
+- MCP runtime inventory at `v3.2.0` lists nine tools including `memory_neighborhood` (`docs/contracts/mcp-tools-v1.json`, `CARPEOS_MCP_TOOLS`).
+- Website asset digests remain unchanged from the original provenance pin (see `PROVENANCE.md`).
 
 ## Deliberate non-claims
 
-The website does not present GraphRAG, a hosted Worker, hosted MCP, SaaS, or production hosted deployment as implemented. Future capabilities remain documented as planned in the CarpeOS source repository until implementation and tests exist.
+The website does not present hosted graph adapters, a hosted Worker production deploy, hosted MCP, multi-tenant SaaS, automatic Claim/AcceptanceDecision creation, or B1 policy-reconciliation apply/writer/receipt as implemented. B0 `reconcile-policy` is documented in source as preview-only. Future capabilities remain documented as planned in the CarpeOS source repository until implementation and tests exist.
