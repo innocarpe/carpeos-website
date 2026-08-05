@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B1020">
-  <meta name="description" content="A focused map of CarpeOS architecture, installation, capture, retrieval, MCP, and design records.">
+  <meta name="description" content="A focused map of CarpeOS architecture, installation, capture, adjudication, retrieval, MCP, OKF export, and design records.">
   <title>Documentation — CarpeOS</title>
   <link rel="icon" href="../assets/carpeos-mark.png" type="image/png">
   <link rel="stylesheet" href="../css/styles.css">
@@ -39,12 +39,12 @@
         <div class="reveal">
           <span class="eyebrow">Documentation</span>
           <h1 id="docs-heading">Understand the model before connecting the tools.</h1>
-          <p>CarpeOS is pre-MVP and local-first. These links point to the public source repository, where implementation status, contracts, ADRs, and verification live together.</p>
+          <p>CarpeOS is local-first and open source. The current public package is <strong>@innocarpe/carpeos@3.2.0</strong>. These links point to the public source repository, where contracts, ADRs, product DoDs, and verification live together.</p>
         </div>
         <div class="docs-hero-card reveal">
           <span>Start here</span>
-          <strong>Capture context. Compound knowledge.</strong>
-          <p>Evidence is not a claim. Projections are not canonical. Accepted status is derived with provenance.</p>
+          <strong>Capture. Adjudicate. Retrieve promoted meaning.</strong>
+          <p>Evidence is not a claim. Default search is promoted only. Projections are not canonical. Accepted status is derived with provenance.</p>
           <a href="../index.html#how">See the system flow <span aria-hidden="true">→</span></a>
         </div>
       </div>
@@ -87,12 +87,13 @@
           <section class="docs-group reveal" aria-labelledby="group-retrieval">
             <div class="docs-group-heading">
               <span aria-hidden="true">03</span>
-              <div><h3 id="group-retrieval">Retrieve and use</h3><p>Search locally and give agents bounded context.</p></div>
+              <div><h3 id="group-retrieval">Adjudicate, retrieve, and use</h3><p>Promote meaning, search locally, and give agents bounded context.</p></div>
             </div>
             <ul>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/retrieval.md" target="_blank" rel="noopener noreferrer"><span>Retrieval guide</span><small>Search, recheck, and context packs</small></a></li>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-server.md" target="_blank" rel="noopener noreferrer"><span>MCP server</span><small>Local stdio setup and use</small></a></li>
-              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md" target="_blank" rel="noopener noreferrer"><span>MCP tool contract</span><small>Eight local agent tools</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/contracts/mcp-tools-v1.md" target="_blank" rel="noopener noreferrer"><span>MCP tool contract</span><small>Local agent tool inventory</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/okf-export.md" target="_blank" rel="noopener noreferrer"><span>OKF export</span><small>v0.2 portable promoted bundles</small></a></li>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-context-pack-smoke.md" target="_blank" rel="noopener noreferrer"><span>Context-pack smoke</span><small>Synthetic local verification</small></a></li>
             </ul>
           </section>
@@ -100,10 +101,11 @@
           <section class="docs-group reveal" aria-labelledby="group-status">
             <div class="docs-group-heading">
               <span aria-hidden="true">04</span>
-              <div><h3 id="group-status">Status and safety</h3><p>Know what is implemented, local, planned, or deliberately excluded.</p></div>
+              <div><h3 id="group-status">Status and safety</h3><p>Know what is shipped, local, planned, or deliberately excluded.</p></div>
             </div>
             <ul>
-              <li><a href="https://github.com/innocarpe/carpeos#what-works-today" target="_blank" rel="noopener noreferrer"><span>What works today</span><small>Pre-MVP implementation table</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos#what-works-today" target="_blank" rel="noopener noreferrer"><span>What works today</span><small>Shipped 3.x implementation table</small></a></li>
+              <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/product-3.2.0.md" target="_blank" rel="noopener noreferrer"><span>Product 3.2 DoD</span><small>adj_v3, evaluators, B0 preview</small></a></li>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/versioning-and-releases.md" target="_blank" rel="noopener noreferrer"><span>Releases</span><small>SemVer, tags, and npm evidence</small></a></li>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/AGENTS.md" target="_blank" rel="noopener noreferrer"><span>Public boundary</span><small>No private sessions, paths, or credentials</small></a></li>
               <li><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer"><span>Apache-2.0</span><small>Project license</small></a></li>
@@ -130,7 +132,7 @@
   <footer class="site-footer">
     <div class="container footer-bottom docs-footer-bottom">
       <a href="../index.html#top">← Back to CarpeOS</a>
-      <span>Public code. Private knowledge. Pre-MVP; not hosted SaaS.</span>
+      <span>Public code. Private knowledge. Local-first; not hosted SaaS.</span>
     </div>
   </footer>
 </body>
