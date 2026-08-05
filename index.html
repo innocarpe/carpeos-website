@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0B1020">
-  <meta name="description" content="CarpeOS captures context from AI-agent work, preserves provenance, and makes accepted knowledge searchable through local CLI, MCP, and rebuildable projections.">
+  <meta name="description" content="CarpeOS captures AI-agent work, adjudicates what is worth keeping, and retrieves promoted knowledge with provenance through local CLI, MCP, and rebuildable projections.">
   <meta property="og:title" content="CarpeOS — Capture context. Compound knowledge.">
-  <meta property="og:description" content="A local-first personal knowledge system for people who work with AI agents.">
+  <meta property="og:description" content="A local-first personal knowledge OS for people who work with AI agents. Adjudicate meaning, search promoted knowledge, keep provenance intact.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://innocarpe.github.io/carpeos-website/">
   <meta property="og:image" content="https://innocarpe.github.io/carpeos-website/assets/readme-hero.jpg">
@@ -51,10 +51,10 @@
         <div class="hero-copy">
           <div class="status-pill reveal">
             <span class="status-dot" aria-hidden="true"></span>
-            Pre-MVP · local-first · open source
+            v3.2 · local-first · open source
           </div>
           <h1 id="hero-title" class="reveal">Capture context.<br><span>Compound knowledge.</span></h1>
-          <p class="hero-lede reveal">CarpeOS keeps the decisions, evidence, and failure paths from AI-agent work in one place you control — with provenance intact and status explicit.</p>
+          <p class="hero-lede reveal">CarpeOS captures agent sessions with provenance, adjudicates what is worth keeping as durable meaning, and returns promoted knowledge — with status explicit and the trail intact.</p>
           <div class="hero-actions reveal">
             <a class="button button-primary" href="#install">Install CarpeOS</a>
             <a class="button button-secondary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
@@ -66,7 +66,7 @@
           <div class="visual-frame">
             <img src="assets/readme-hero.jpg" alt="A crystalline knowledge core connected to a network of smaller nodes" width="1672" height="941">
             <div class="signal-card signal-card-one">
-              <span>accepted</span>
+              <span>promoted</span>
               <strong>Decision with provenance</strong>
             </div>
             <div class="signal-card signal-card-two">
@@ -78,8 +78,8 @@
       </div>
       <div class="container trust-strip reveal" aria-label="Core principles">
         <span>Append-only events</span>
-        <span>Explicit acceptance</span>
-        <span>Local by default</span>
+        <span>Adjudicated meaning</span>
+        <span>Promoted-only default</span>
         <span>Rebuildable projections</span>
       </div>
     </section>
@@ -89,7 +89,7 @@
         <div class="section-heading reveal">
           <span class="eyebrow">Why CarpeOS</span>
           <h2 id="why-title">Your most valuable context should not disappear with the session.</h2>
-          <p>A real decision, a rejected approach, or a bug path often ends up split across chat history, terminal scrollback, and notes. CarpeOS keeps the trail without flattening every statement into “memory.”</p>
+          <p>A real decision, a rejected approach, or a bug path often ends up split across chat history, terminal scrollback, and notes. CarpeOS keeps the trail without treating every statement as “memory.”</p>
         </div>
 
         <div class="problem-grid">
@@ -101,21 +101,21 @@
           </article>
           <article class="problem-card reveal">
             <span class="card-index">02</span>
+            <h3>Session noise floods memory</h3>
+            <p>Not every lifecycle event should become searchable meaning.</p>
+            <div class="card-resolution">Adjudicate first: promote, hold, or reject — default search is promoted only.</div>
+          </article>
+          <article class="problem-card reveal">
+            <span class="card-index">03</span>
             <h3>Knowledge in silos</h3>
             <p>Each coding tool starts with a different memory of the work.</p>
             <div class="card-resolution">Capture into a provider-neutral event trail and retrieve through shared interfaces.</div>
           </article>
           <article class="problem-card reveal">
-            <span class="card-index">03</span>
+            <span class="card-index">04</span>
             <h3>Notes become authority</h3>
             <p>Generated documents drift until no one knows what was canonical.</p>
             <div class="card-resolution">Treat notes, indexes, and context packs as rebuildable projections.</div>
-          </article>
-          <article class="problem-card reveal">
-            <span class="card-index">04</span>
-            <h3>Continuity breaks</h3>
-            <p>The next machine or session has to rediscover the same decisions.</p>
-            <div class="card-resolution">Use a local-first store with optional private, operator-run sync.</div>
           </article>
         </div>
       </div>
@@ -126,31 +126,31 @@
         <div class="section-heading section-heading-split reveal">
           <div>
             <span class="eyebrow">How it fits</span>
-            <h2 id="how-title">Capture once. Reuse with the trail attached.</h2>
+            <h2 id="how-title">Capture once. Adjudicate. Reuse with the trail attached.</h2>
           </div>
-          <p>Provider hooks feed a private canonical event store. Accepted facts are derived at query time; MCP, CLI, and Obsidian remain interfaces and projections.</p>
+          <p>Provider hooks feed a private event store. A precision-first adjudicator assigns promote, hold, or reject. Default retrieval returns promoted meaning; MCP, CLI, and projections remain interfaces — not the source of truth.</p>
         </div>
 
         <figure class="architecture-frame reveal">
-          <img src="assets/architecture-flow.svg" alt="CarpeOS flow from agent hooks through capture, canonicalization, retrieval, and MCP, CLI, and Obsidian interfaces" width="1120" height="420">
+          <img src="assets/architecture-flow.svg" alt="CarpeOS flow from agent hooks through capture, store, and MCP, CLI, and Obsidian interfaces" width="1120" height="420">
         </figure>
 
         <ol class="process-grid" aria-label="CarpeOS flow">
           <li class="process-step reveal">
             <span>1</span>
-            <div><h3>Capture</h3><p>Selected lifecycle events enter an encrypted outbox and local store.</p></div>
+            <div><h3>Capture</h3><p>Selected lifecycle events enter an encrypted outbox and local store. Host hooks stay fail-open and fast.</p></div>
           </li>
           <li class="process-step reveal">
             <span>2</span>
-            <div><h3>Canonicalize</h3><p>Evidence, observations, claims, decisions, and supersession keep distinct roles.</p></div>
+            <div><h3>Adjudicate</h3><p>Post-capture rules assign promote, hold, or reject. Held items wait for operator review; nothing auto-accepts a claim.</p></div>
           </li>
           <li class="process-step reveal">
             <span>3</span>
-            <div><h3>Retrieve</h3><p>Search and context packs return bounded results with provenance rechecked.</p></div>
+            <div><h3>Retrieve</h3><p>Default search is promoted and active only. Local graph and hybrid ranking return bounded results with provenance rechecked.</p></div>
           </li>
           <li class="process-step reveal">
             <span>4</span>
-            <div><h3>Use</h3><p>People and agents work through CLI, local MCP, and rebuildable projections.</p></div>
+            <div><h3>Use</h3><p>People and agents work through CLI, local MCP, Obsidian notes, and OKF export projections.</p></div>
           </li>
         </ol>
       </div>
@@ -161,23 +161,23 @@
         <div class="section-heading reveal">
           <span class="eyebrow">Local interfaces</span>
           <h2 id="interfaces-title">The same knowledge trail, available where work happens.</h2>
-          <p>Current interfaces are local and pre-MVP. They expose the same underlying model without turning a projection into the source of truth.</p>
+          <p>Interfaces are local and share the same underlying model. Projections can be deleted and rebuilt; they never become the canonical store.</p>
         </div>
 
         <div class="interface-grid">
           <article class="interface-card interface-card-featured reveal">
             <div class="interface-icon" aria-hidden="true">›_</div>
             <span class="interface-label">CLI</span>
-            <h3>Search, retrieve, and build context packs.</h3>
-            <p>Use local commands for memory search, individual records, and bounded task context.</p>
-            <code>carpeos memory context-pack</code>
+            <h3>Capture, adjudicate, search, and pack context.</h3>
+            <p>Install hooks, review held drafts, rebuild retrieval indexes, and build bounded context packs from promoted meaning.</p>
+            <code>carpeos memory search · adjudicate · okf export</code>
           </article>
           <article class="interface-card reveal">
             <div class="interface-icon" aria-hidden="true">{ }</div>
             <span class="interface-label">MCP · stdio</span>
-            <h3>Eight local tools for agents.</h3>
-            <p>Trace evidence, capture observations, propose claims, and retrieve context through a local stdio server.</p>
-            <code>memory_context_pack</code>
+            <h3>Nine local tools for agents.</h3>
+            <p>Search, trace, timeline, related records, graph neighborhood, capture, and propose claims through a local stdio server.</p>
+            <code>memory_search · memory_neighborhood</code>
           </article>
           <article class="interface-card reveal">
             <div class="interface-icon" aria-hidden="true">◇</div>
@@ -185,6 +185,13 @@
             <h3>Readable notes without changing authority.</h3>
             <p>Generate Markdown from the local store. Delete and rebuild it whenever the projection drifts.</p>
             <code>projection ≠ source of truth</code>
+          </article>
+          <article class="interface-card reveal">
+            <div class="interface-icon" aria-hidden="true">⊞</div>
+            <span class="interface-label">OKF export</span>
+            <h3>Portable promoted knowledge bundles.</h3>
+            <p>Export a trust-zone-scoped, promoted-by-default OKF v0.2 bundle. Export only — not an import path or canonical store.</p>
+            <code>carpeos okf export|rebuild</code>
           </article>
         </div>
       </div>
@@ -195,10 +202,11 @@
         <div class="model-copy reveal">
           <span class="eyebrow">Trust model</span>
           <h2 id="model-title">A model suggestion is not automatically a fact.</h2>
-          <p>CarpeOS preserves the difference between what was observed, what was proposed, what was accepted, and what was later replaced.</p>
+          <p>CarpeOS preserves the difference between what was observed, what was proposed, what was promoted into active meaning, and what was later replaced.</p>
           <ul class="check-list">
+            <li>Default search is promoted and active only; held drafts require opt-in.</li>
+            <li>Dispositions and events are append-only by policy version.</li>
             <li>Accepted status is derived at query time.</li>
-            <li>After acceptance, the event log is append-only.</li>
             <li>Sensitive plaintext stays outside the event body.</li>
             <li>Trust zones are isolation boundaries, not decorative labels.</li>
           </ul>
@@ -207,14 +215,14 @@
         <div class="model-stack reveal" aria-label="Knowledge status progression">
           <div class="model-node"><span>Evidence</span><small>what can be inspected</small></div>
           <div class="model-arrow" aria-hidden="true">↓</div>
-          <div class="model-node"><span>Observation</span><small>what was seen</small></div>
-          <div class="model-arrow" aria-hidden="true">↓</div>
-          <div class="model-node model-node-accent"><span>Claim</span><small>what is proposed</small></div>
+          <div class="model-node model-node-accent"><span>Adjudicate</span><small>promote · hold · reject</small></div>
           <div class="model-branch">
-            <div class="model-node"><span>Acceptance</span><small>what was decided</small></div>
-            <div class="model-node"><span>Supersession</span><small>what replaced it</small></div>
+            <div class="model-node"><span>Promoted</span><small>active observation</small></div>
+            <div class="model-node"><span>Held</span><small>draft for review</small></div>
           </div>
-          <div class="model-result">Accepted facts, derived with provenance</div>
+          <div class="model-arrow" aria-hidden="true">↓</div>
+          <div class="model-node"><span>Claim · Acceptance</span><small>proposed, then decided</small></div>
+          <div class="model-result">Promoted meaning first, with provenance</div>
         </div>
       </div>
     </section>
@@ -224,7 +232,7 @@
         <div class="install-copy reveal">
           <span class="eyebrow">Get started</span>
           <h2 id="install-title">Install locally. See the plan before applying it.</h2>
-          <p>CarpeOS requires Node.js 22.22 or newer. The setup flow can show resolved paths and actions before it changes anything.</p>
+          <p>CarpeOS requires Node.js 22.22 or newer. The setup flow shows resolved paths and actions before it changes anything. Pin <code>@innocarpe/carpeos@3.2.0</code> when you want a fixed release.</p>
           <div class="install-links">
             <a href="docs/index.html">Open the docs hub <span aria-hidden="true">→</span></a>
             <a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md" target="_blank" rel="noopener noreferrer">Full install guide <span aria-hidden="true">↗</span></a>
@@ -243,9 +251,12 @@ npm install -g @innocarpe/carpeos
 <span class="comment"># inspect actions first</span>
 carpeos setup plan
 
-<span class="comment"># apply the resolved setup</span>
-carpeos setup run --apply</code></pre>
-          <p class="terminal-footnote">Pre-MVP. Local interfaces are implemented; no hosted Worker, hosted MCP, or SaaS deployment is claimed.</p>
+<span class="comment"># apply runtime + MCP registration</span>
+carpeos setup run --apply
+
+<span class="comment"># install merge-safe capture hooks</span>
+carpeos setup hooks install --apply</code></pre>
+          <p class="terminal-footnote">Local-first. Interfaces ship on your machine; no hosted Worker, hosted MCP, or SaaS deployment is claimed.</p>
         </div>
       </div>
     </section>
@@ -262,7 +273,7 @@ carpeos setup run --apply</code></pre>
           <a class="docs-card reveal" href="docs/index.html">
             <span>Website guide</span>
             <h3>Documentation hub</h3>
-            <p>A focused map of architecture, installation, capture, retrieval, and MCP references.</p>
+            <p>A focused map of architecture, installation, capture, adjudication, retrieval, and MCP references.</p>
             <strong>Open locally <span aria-hidden="true">→</span></strong>
           </a>
           <a class="docs-card reveal" href="https://github.com/innocarpe/carpeos/blob/main/docs/architecture/overview.md" target="_blank" rel="noopener noreferrer">
@@ -302,16 +313,16 @@ carpeos setup run --apply</code></pre>
           <img src="assets/carpeos-mark.png" alt="" width="34" height="34">
           <span>CarpeOS</span>
         </a>
-        <p>A local-first personal knowledge system for people who work with AI agents.</p>
+        <p>A local-first personal knowledge OS for people who work with AI agents.</p>
       </div>
       <div class="footer-links">
         <div><strong>Explore</strong><a href="#how">How it fits</a><a href="#interfaces">Interfaces</a><a href="docs/index.html">Docs</a></div>
-        <div><strong>Project</strong><a href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Source</a><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+        <div><strong>Project</strong><a href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Source</a><a href="https://github.com/innocarpe/carpeos/releases/tag/v3.2.0" target="_blank" rel="noopener noreferrer">v3.2.0</a><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
       </div>
     </div>
     <div class="container footer-bottom">
       <span>© <span data-year>2026</span> CarpeOS</span>
-      <span>Public code. Private knowledge. Pre-MVP; not hosted SaaS.</span>
+      <span>Public code. Private knowledge. Local-first; not hosted SaaS.</span>
     </div>
   </footer>
 </body>
