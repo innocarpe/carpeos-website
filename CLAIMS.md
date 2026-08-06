@@ -15,7 +15,7 @@ Line ranges below refer to the immutable source documents at `v5.0.0` unless not
 
 | ID | Rendered claim or command | Classification | Immutable evidence | Release-time observation | Reviewer · date · disposition |
 |---|---|---|---|---|---|
-| `landing-status` | “v5.0 · local-first · open source” | shipped release / local-only | `CHANGELOG.md` `[5.0.0]`; GitHub Release `v5.0.0`; npm `@innocarpe/carpeos@5.0.0` | Public package `5.0.0` is published; hosted product deployment is not claimed | `innocarpe` · 2026-08-06 · `APPROVED` |
+| `landing-status` | “v5.0.0 · local-first · open source” | shipped release / local-only | `CHANGELOG.md` `[5.0.0]`; GitHub Release `v5.0.0`; npm `@innocarpe/carpeos@5.0.0` | Public package `5.0.0` is published; full SemVer `x.y.z` only (no major.minor truncation); hosted product deployment is not claimed | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `landing-hero-summary` | CarpeOS captures agent sessions with provenance, adjudicates durable meaning, and returns promoted knowledge with explicit status. | implemented model / local-only | `README.md` intro + adjudication section + product line table | Copy matches shipped 2.0 adjudication + 3.x retrieval path retained under 5.0 | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `landing-public-private` | “Public code. Private knowledge. Not hosted SaaS.” | public boundary / not deployed | `README.md` public/private callout; What works today NOT DEPLOYED | Public repository confirmed; no hosted SaaS claim made | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `principle-append-only` | “Append-only events” | implemented model | `README.md` “How it fits together” rules | Model claim only; no hosted claim | `innocarpe` · 2026-08-06 · `APPROVED` |
