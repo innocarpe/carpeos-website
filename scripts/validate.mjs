@@ -470,6 +470,23 @@ function validateEvidence(errors) {
   if (!landing.includes("https://innocarpe.github.io/carpeos-website/")) {
     errors.push("E_PROJECT_BASE index.html: missing canonical project Pages metadata");
   }
+  // CarpeOS release displays must be full SemVer x.y.z — never major.minor truncation (e.g. v5.0).
+  // Scoped to product release surfaces (status pill, package pin, GitHub release tag), not OKF v0.2 etc.
+  for (const file of TEXT_SURFACES) {
+    const source = fs.readFileSync(path.join(ROOT, file), "utf8");
+    for (const match of source.match(/\bv\d+\.\d+\s*·/g) || []) {
+      errors.push(`E_SEMVER_TRUNCATED ${file}: ${match.trim()} (status display requires full x.y.z)`);
+    }
+    for (const match of source.match(/@innocarpe\/carpeos@\d+\.\d+(?!\.\d)/g) || []) {
+      errors.push(`E_SEMVER_TRUNCATED ${file}: ${match} (package pin requires full x.y.z)`);
+    }
+    for (const match of source.match(/releases\/tag\/v\d+\.\d+(?![\d.])/g) || []) {
+      errors.push(`E_SEMVER_TRUNCATED ${file}: ${match} (release tag requires full x.y.z)`);
+    }
+  }
+  if (!landing.includes("v5.0.0 · local-first · open source")) {
+    errors.push("E_LANDING_STATUS index.html: missing full-SemVer status pill");
+  }
 }
 
 function validatePublicBoundarySource(source, file) {
