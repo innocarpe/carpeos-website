@@ -73,7 +73,7 @@ Line ranges below refer to the immutable source documents at `v5.0.0` unless not
 | `docs-okf` | OKF export → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/okf-export.md` | current public destination / local-only | `README.md` guides table; `CHANGELOG.md` 3.1.0 | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `docs-mcp-smoke` | Context-pack smoke → `https://github.com/innocarpe/carpeos/blob/main/docs/guides/mcp-context-pack-smoke.md` | current public destination / synthetic verification | `README.md` guides table | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `docs-works-today` | What works today → `https://github.com/innocarpe/carpeos#what-works-today` | current status destination | `README.md` What works today | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
-| `docs-product-50` | Product 5.0 DoD → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/product-5.0.0.md` | current product destination | `CHANGELOG.md` `[5.0.0]`; `docs/maintainers/product-5.0.0.md` | Public path; draft-lane major with `canonical_effect: "none"`; M8 release seam deferred | `innocarpe` · 2026-08-06 · `APPROVED` |
+| `docs-product-50` | Product 5.0.0 DoD → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/product-5.0.0.md` | current product destination | `CHANGELOG.md` `[5.0.0]`; `docs/maintainers/product-5.0.0.md` | Public path; draft-lane major with `canonical_effect: "none"`; M8 release seam deferred | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `docs-releases` | Releases → `https://github.com/innocarpe/carpeos/blob/main/docs/maintainers/versioning-and-releases.md` | current public destination | `README.md` versioning | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `docs-public-boundary` | Public boundary → `https://github.com/innocarpe/carpeos/blob/main/AGENTS.md` | current safety destination | `README.md` contributing / boundary | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
 | `docs-license` | Apache-2.0 → `https://github.com/innocarpe/carpeos/blob/main/LICENSE` | current license destination | `README.md` License | Public path | `innocarpe` · 2026-08-06 · `APPROVED` |
@@ -98,7 +98,7 @@ Verified on 2026-08-06 against product `5.0.0`:
 - Annotated tag object target commit: `bba6fdbdd19155aea2d44efacde742afe79a7c36`.
 - npm package integrity (registry): `sha512-v1CSoXEG4OXT2casrFPu7cYbDYpLO42nmYAACRMavsqXSM2JztOt1tkoYSaDJqb16aaA6kQlMuabOLJ6GWZUbw==`.
 - `CHANGELOG.md` `[5.0.0]` records the Product 5.0 opt-in draft lane (`carpeos v5`, DeepSeek Direct primary extract, offline M0–M7 contracts). Every V5 record remains `canonical_effect: "none"`; capture hot path is not wired to LLM/network.
-- Product 5.0 DoD: `docs/maintainers/product-5.0.0.md`. M8 release-authority seam remains deferred; package ship is not claimed as accepted body-free release-authority evidence.
+- Product 5.0.0 DoD: `docs/maintainers/product-5.0.0.md`. M8 release-authority seam remains deferred; package ship is not claimed as accepted body-free release-authority evidence.
 - Product 3.2 activation receipt in `docs/maintainers/product-3.2.0.md` remains the last formal disposable synthetic setup/doctor/dogfood/OKF activation record for the core install path.
 - MCP runtime inventory at `v5.0.0` lists nine tools including `memory_neighborhood` (`docs/contracts/mcp-tools-v1.json`).
 - Website asset digests remain unchanged from the original provenance pin (see `PROVENANCE.md`).
