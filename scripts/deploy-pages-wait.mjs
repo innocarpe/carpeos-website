@@ -65,7 +65,9 @@ async function main() {
   if (!idTokenUrl || !idTokenReq) {
     throw new Error("ACTIONS_ID_TOKEN_REQUEST_* not available; ensure id-token: write");
   }
-  const oidcRes = await fetch(`${idTokenUrl}&audience=github-pages`, {
+  // Match actions/deploy-pages: core.getIDToken() with default audience
+  // (https://github.com/<owner>), not audience=github-pages.
+  const oidcRes = await fetch(idTokenUrl, {
     headers: { Authorization: `Bearer ${idTokenReq}` },
   });
   if (!oidcRes.ok) {
