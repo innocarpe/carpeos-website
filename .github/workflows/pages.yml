@@ -18,9 +18,9 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.meta.outputs.page_url }}
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,7 +28,6 @@ jobs:
       - name: Prepare publish tree
         run: |
           mkdir -p _site
-          # Publish only website surfaces (no .git / workflow / fixtures)
           rsync -a \
             --exclude '.git/' \
             --exclude '.github/' \
@@ -37,6 +36,7 @@ jobs:
             ./ _site/
 
       - name: Configure Pages
+        id: meta
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
@@ -44,8 +44,9 @@ jobs:
         with:
           path: _site
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          timeout: "1800000"
+      - name: Deploy and wait (no cancel)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MAX_WAIT_MS: "2700000"
+          POLL_MS: "10000"
+        run: node scripts/deploy-pages-wait.mjs
