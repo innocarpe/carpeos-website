@@ -15,7 +15,7 @@ Source repository: <https://github.com/innocarpe/carpeos>
 
 Pinned source commit for binary assets: `699dcdfbf45804f20e6b4cd6f5ddc7f23b1dca94`
 
-Asset blobs are unchanged through product `v3.2.0` (`59328c0eb28096a8921ae5c7c8af4b06aa32dbc5`). Website product claims for the 3.x update are bound in `CLAIMS.md` to that release tag.
+Asset blobs are unchanged through product `v4.0.0` (`be1691d2cd6bab8077a1e10dafcaa64cada3c2e3`). Website product claims for the 4.x update are bound in `CLAIMS.md` to that release tag.
 
 | Published file | Source path | Source Git blob | Published SHA-256 |
 |---|---|---|---|
