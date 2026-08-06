@@ -441,15 +441,15 @@ function validateEvidence(errors) {
     if (!provenance.includes(token)) errors.push(`E_PROVENANCE missing ${token}`);
   }
   const requiredClaimTokens = [
-    "be1691d2cd6bab8077a1e10dafcaa64cada3c2e3",
-    "@innocarpe/carpeos@4.0.0",
+    "bba6fdbdd19155aea2d44efacde742afe79a7c36",
+    "@innocarpe/carpeos@5.0.0",
     "Node.js `>=22.22.0`",
     "carpeos setup plan",
     "carpeos setup run --apply",
     "carpeos setup hooks install --apply",
     "APPROVED_WITH_CAVEAT",
-    "https://github.com/innocarpe/carpeos/releases/tag/v4.0.0",
-    "https://registry.npmjs.org/@innocarpe%2Fcarpeos/4.0.0",
+    "https://github.com/innocarpe/carpeos/releases/tag/v5.0.0",
+    "https://registry.npmjs.org/@innocarpe%2Fcarpeos/5.0.0",
     "memory_neighborhood",
     "Deliberate non-claims",
   ];
