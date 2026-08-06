@@ -441,15 +441,15 @@ function validateEvidence(errors) {
     if (!provenance.includes(token)) errors.push(`E_PROVENANCE missing ${token}`);
   }
   const requiredClaimTokens = [
-    "bba6fdbdd19155aea2d44efacde742afe79a7c36",
-    "@innocarpe/carpeos@5.0.0",
+    "406cb97aef84775b75ed91ff434de87bcb8356b4",
+    "@innocarpe/carpeos@6.1.0",
     "Node.js `>=22.22.0`",
     "carpeos setup plan",
     "carpeos setup run --apply",
     "carpeos setup hooks install --apply",
     "APPROVED_WITH_CAVEAT",
-    "https://github.com/innocarpe/carpeos/releases/tag/v5.0.0",
-    "https://registry.npmjs.org/@innocarpe%2Fcarpeos/5.0.0",
+    "https://github.com/innocarpe/carpeos/releases/tag/v6.1.0",
+    "https://registry.npmjs.org/@innocarpe%2Fcarpeos/6.1.0",
     "memory_neighborhood",
     "Deliberate non-claims",
   ];
@@ -484,7 +484,7 @@ function validateEvidence(errors) {
       errors.push(`E_SEMVER_TRUNCATED ${file}: ${match} (release tag requires full x.y.z)`);
     }
   }
-  if (!landing.includes("v5.0.0 · local-first · open source")) {
+  if (!landing.includes("v6.1.0 · local-first · open source")) {
     errors.push("E_LANDING_STATUS index.html: missing full-SemVer status pill");
   }
 }
