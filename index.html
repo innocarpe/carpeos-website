@@ -51,10 +51,10 @@
         <div class="hero-copy">
           <div class="status-pill reveal">
             <span class="status-dot" aria-hidden="true"></span>
-            v6.1.0 · local-first · open source
+            v6.6.0 · local-first · open source
           </div>
           <h1 id="hero-title" class="reveal">Capture context.<br><span>Compound knowledge.</span></h1>
-          <p class="hero-lede reveal">CarpeOS captures agent sessions with provenance, adjudicates what is worth keeping as durable meaning, and returns promoted knowledge — with status explicit and the trail intact.</p>
+          <p class="hero-lede reveal">CarpeOS captures agent sessions with provenance, compounds verified meaning through a post-capture agentic layer, and returns promoted knowledge — with status explicit and the trail intact.</p>
           <div class="hero-actions reveal">
             <a class="button button-primary" href="#install">Install CarpeOS</a>
             <a class="button button-secondary" href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Explore the source <span aria-hidden="true">↗</span></a>
@@ -142,15 +142,15 @@
           </li>
           <li class="process-step reveal">
             <span>2</span>
-            <div><h3>Adjudicate</h3><p>Post-capture rules assign promote, hold, or reject. Held items wait for operator review; nothing auto-accepts a claim.</p></div>
+            <div><h3>Adjudicate</h3><p>Rules and the post-capture agentic plane assign promote, hold, or reject. Verified decision, constraint, and preference meaning can promote without load-bearing HITL; nothing auto-accepts a claim.</p></div>
           </li>
           <li class="process-step reveal">
             <span>3</span>
-            <div><h3>Retrieve</h3><p>Default search is promoted and active only. Local graph and hybrid ranking return bounded results with provenance rechecked.</p></div>
+            <div><h3>Retrieve</h3><p>Default search is promoted and active only. Local hybrid ranking boosts typed promoted units; results stay bounded with provenance rechecked.</p></div>
           </li>
           <li class="process-step reveal">
             <span>4</span>
-            <div><h3>Use</h3><p>People and agents work through CLI, local MCP, Obsidian notes, and OKF export projections.</p></div>
+            <div><h3>Use</h3><p>People and agents work through CLI (including <code>carpeos agentic</code>), local MCP, Obsidian notes, and OKF export projections.</p></div>
           </li>
         </ol>
       </div>
@@ -168,9 +168,9 @@
           <article class="interface-card interface-card-featured reveal">
             <div class="interface-icon" aria-hidden="true">›_</div>
             <span class="interface-label">CLI</span>
-            <h3>Capture, adjudicate, search, and pack context.</h3>
-            <p>Install hooks, review held drafts, rebuild retrieval indexes, and build bounded context packs from promoted meaning.</p>
-            <code>carpeos memory search · adjudicate · okf export</code>
+            <h3>Capture, compound, search, and pack context.</h3>
+            <p>Install hooks, run the post-capture agentic loop, retract with human confirmation, rebuild retrieval indexes, and build bounded context packs from promoted meaning.</p>
+            <code>carpeos agentic run · memory search · okf export</code>
           </article>
           <article class="interface-card reveal">
             <div class="interface-icon" aria-hidden="true">{ }</div>
@@ -181,10 +181,10 @@
           </article>
           <article class="interface-card reveal">
             <div class="interface-icon" aria-hidden="true">◇</div>
-            <span class="interface-label">Obsidian projection</span>
-            <h3>Readable notes without changing authority.</h3>
-            <p>Generate Markdown from the local store. Delete and rebuild it whenever the projection drifts.</p>
-            <code>projection ≠ source of truth</code>
+            <span class="interface-label">Agentic layer</span>
+            <h3>Post-capture compound knowledge.</h3>
+            <p>Fail-open feed after capture; offline by default. Promote when verified for decision, constraint, and preference. Optional always-on timer. Never auto-creates AcceptanceDecision.</p>
+            <code>carpeos agentic timer|run|retract</code>
           </article>
           <article class="interface-card reveal">
             <div class="interface-icon" aria-hidden="true">⊞</div>
@@ -205,10 +205,10 @@
           <p>CarpeOS preserves the difference between what was observed, what was proposed, what was promoted into active meaning, and what was later replaced.</p>
           <ul class="check-list">
             <li>Default search is promoted and active only; held drafts require opt-in.</li>
-            <li>Dispositions and events are append-only by policy version.</li>
-            <li>Accepted status is derived at query time.</li>
-            <li>Sensitive plaintext stays outside the event body.</li>
-            <li>Trust zones are isolation boundaries, not decorative labels.</li>
+            <li>Capture never calls an LLM; the agentic plane runs after commit, fail-open.</li>
+            <li>Verified decision, constraint, and preference can promote without load-bearing HITL; AcceptanceDecision is never automatic.</li>
+            <li>Dispositions and events are append-only by policy version; retract uses human-confirmed supersession.</li>
+            <li>Sensitive plaintext stays outside the event body; trust zones stay isolation boundaries.</li>
           </ul>
         </div>
 
@@ -232,7 +232,7 @@
         <div class="install-copy reveal">
           <span class="eyebrow">Get started</span>
           <h2 id="install-title">Install locally. See the plan before applying it.</h2>
-          <p>CarpeOS requires Node.js 22.22 or newer. The setup flow shows resolved paths and actions before it changes anything. Pin <code>@innocarpe/carpeos@6.1.0</code> when you want a fixed release.</p>
+          <p>CarpeOS requires Node.js 22.22 or newer. The setup flow shows resolved paths and actions before it changes anything. Pin <code>@innocarpe/carpeos@6.6.0</code> when you want a fixed release.</p>
           <div class="install-links">
             <a href="docs/index.html">Open the docs hub <span aria-hidden="true">→</span></a>
             <a href="https://github.com/innocarpe/carpeos/blob/main/docs/guides/one-stop-install.md" target="_blank" rel="noopener noreferrer">Full install guide <span aria-hidden="true">↗</span></a>
@@ -317,7 +317,7 @@ carpeos setup hooks install --apply</code></pre>
       </div>
       <div class="footer-links">
         <div><strong>Explore</strong><a href="#how">How it fits</a><a href="#interfaces">Interfaces</a><a href="docs/index.html">Docs</a></div>
-        <div><strong>Project</strong><a href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Source</a><a href="https://github.com/innocarpe/carpeos/releases/tag/v6.1.0" target="_blank" rel="noopener noreferrer">v6.1.0</a><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+        <div><strong>Project</strong><a href="https://github.com/innocarpe/carpeos" target="_blank" rel="noopener noreferrer">Source</a><a href="https://github.com/innocarpe/carpeos/releases/tag/v6.6.0" target="_blank" rel="noopener noreferrer">v6.6.0</a><a href="https://github.com/innocarpe/carpeos/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
       </div>
     </div>
     <div class="container footer-bottom">
